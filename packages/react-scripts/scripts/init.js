@@ -179,6 +179,9 @@ module.exports = function(
   console.log();
   console.log(chalk.cyan('  cd'), cdpath);
   console.log(`  ${chalk.cyan(`${displayedCommand} start`)}`);
+  console.log();
+  console.log('Testing custom script!!!');
+
   if (readmeExists) {
     console.log();
     console.log(
