@@ -57,7 +57,9 @@
     "webpack": "2.3.2",
     "webpack-dev-server": "2.4.2",
     "webpack-manifest-plugin": "1.1.0",
-    "whatwg-fetch": "2.0.3"
+    "whatwg-fetch": "2.0.3",
+    "fable-loader": "^1.0.0-narumi-9",
+    "fable-core": "^1.0.0-narumi-8"
   },
   "devDependencies": {
     "react": "^15.3.0",
