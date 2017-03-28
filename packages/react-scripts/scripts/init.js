@@ -43,7 +43,6 @@ module.exports = function(
 
   // Setup the script rules
   appPackage.scripts = {
-    printenv: 'printenv',
     start: 'react-scripts start',
     build: 'react-scripts build',
     test: 'react-scripts test --env=jsdom',
@@ -152,6 +151,8 @@ module.exports = function(
 
   console.log();
   console.log(`Success! Created ${appName} at ${appPath}`);
+  console.log();
+  console.log('This is custom version of CRA featuring Fable.');
   console.log('Inside that directory, you can run several commands:');
   console.log();
   console.log(chalk.cyan(`  ${displayedCommand} start`));
@@ -179,8 +180,6 @@ module.exports = function(
   console.log();
   console.log(chalk.cyan('  cd'), cdpath);
   console.log(`  ${chalk.cyan(`${displayedCommand} start`)}`);
-  console.log();
-  console.log('Testing custom script!!!');
 
   if (readmeExists) {
     console.log();
