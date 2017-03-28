@@ -43,6 +43,7 @@ module.exports = function(
 
   // Setup the script rules
   appPackage.scripts = {
+    printenv: 'printenv',
     start: 'react-scripts start',
     build: 'react-scripts build',
     test: 'react-scripts test --env=jsdom',
