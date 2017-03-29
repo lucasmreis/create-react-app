@@ -82,9 +82,5 @@ yarn cache clean || true
 cd "$root_path"
 node packages/create-react-app/index.js --scripts-version="$scripts_path" "$@"
 
-# Install .NET dependencies
-cd "$@"
-dotnet restore
-
 # Cleanup
 cleanup
