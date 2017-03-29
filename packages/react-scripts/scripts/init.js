@@ -43,19 +43,12 @@ module.exports = function(
 
   // Setup the script rules
   appPackage.scripts = {
-<<<<<<< HEAD
-    lucas: 'printenv',
-    start: 'react-scripts start',
-    build: 'react-scripts build',
-    test: 'react-scripts test --env=jsdom',
-=======
     startjs: 'react-scripts start',
     buildjs: 'react-scripts build',
     testjs: 'react-scripts test --env=jsdom',
     start: 'dotnet fable npm-run startjs',
     build: 'dotnet fable npm-run buildjs',
     test: 'dotnet fable npm-run testjs',
->>>>>>> 038df0a... fable build + version
     eject: 'react-scripts eject',
   };
 
