@@ -43,9 +43,12 @@ module.exports = function(
 
   // Setup the script rules
   appPackage.scripts = {
-    start: 'react-scripts start',
-    build: 'react-scripts build',
-    test: 'react-scripts test --env=jsdom',
+    startjs: 'react-scripts start',
+    buildjs: 'react-scripts build',
+    testjs: 'react-scripts test --env=jsdom',
+    start: 'dotnet fable npm-run startjs',
+    build: 'dotnet fable npm-run buildjs',
+    test: 'dotnet fable npm-run testjs',
     eject: 'react-scripts eject',
   };
 
@@ -134,6 +137,15 @@ module.exports = function(
       console.error(`\`${command} ${args.join(' ')}\` failed`);
       return;
     }
+  }
+
+  console.log(`Installing .net dependencies using dotnet restore...`);
+  console.log();
+
+  const dotnetProc = spawn.sync('dotnet', ['restore'], { stdio: 'inherit' });
+  if (dotnetProc.status !== 0) {
+    console.error(`\`${command} ${args.join(' ')}\` failed`);
+    return;
   }
 
   // Display the most elegant way to cd.
