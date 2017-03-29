@@ -1,6 +1,10 @@
 {
   "name": "fable-react-scripts",
+<<<<<<< HEAD
   "version": "1.0.1",
+=======
+  "version": "1.0.0",
+>>>>>>> e54d4d82c3628782343d092feabf18dfa04cd8a2
   "description": "Configuration and scripts for Create React App, adapted to support Fable.",
   "repository": "lucasmreis/create-react-app",
   "license": "BSD-3-Clause",
@@ -51,7 +55,11 @@
     "object-assign": "4.1.1",
     "postcss-loader": "1.3.3",
     "promise": "7.1.1",
+<<<<<<< HEAD
     "react-dev-utils": "0.6.0-alpha.f55d2212",
+=======
+    "react-dev-utils": "0.5.2",
+>>>>>>> e54d4d82c3628782343d092feabf18dfa04cd8a2
     "style-loader": "0.16.0",
     "url-loader": "0.5.8",
     "webpack": "2.3.2",
