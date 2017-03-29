@@ -139,6 +139,7 @@ module.exports = {
       {
         exclude: [
           /\.html$/,
+          /\.fs(x|proj)?$/,
           /\.(js|jsx)$/,
           /\.css$/,
           /\.json$/,
@@ -160,6 +161,18 @@ module.exports = {
         options: {
           limit: 10000,
           name: 'static/media/[name].[hash:8].[ext]',
+        },
+      },
+      {
+        test: /\.fs(x|proj)?$/,
+        use: {
+          loader: 'fable-loader',
+          options: {
+            babel: {
+              presets: [], //[["es2015", {"modules": false}]],
+              plugins: [], // ["transform-runtime"]
+            },
+          },
         },
       },
       // Process JS with Babel.
