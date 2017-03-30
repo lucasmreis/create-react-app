@@ -139,12 +139,29 @@ module.exports = function(
     }
   }
 
+  console.log();
+  console.log(`Installing Fable .net template...`);
+  console.log();
+
+  const dotnetNewProc = spawn.sync(
+    'dotnet',
+    ['new', '-i', 'Fable.Template::*'],
+    { stdio: 'inherit' }
+  );
+  if (dotnetNewProc.status !== 0) {
+    console.error('dotnet new -i Fable.Template::* failed.');
+    return;
+  }
+
+  console.log();
   console.log(`Installing .net dependencies using dotnet restore...`);
   console.log();
 
-  const dotnetProc = spawn.sync('dotnet', ['restore'], { stdio: 'inherit' });
-  if (dotnetProc.status !== 0) {
-    console.error(`\`${command} ${args.join(' ')}\` failed`);
+  const dotnetRestoreProc = spawn.sync('dotnet', ['restore'], {
+    stdio: 'inherit',
+  });
+  if (dotnetRestoreProc.status !== 0) {
+    console.error('dotnet restore failed.');
     return;
   }
 
