@@ -129,7 +129,7 @@ module.exports = function(
   // which doesn't install react and react-dom along with react-scripts
   // or template is presetend (via --internal-testing-template)
   if (!isReactInstalled(appPackage) || template) {
-    console.log(`Installing react and react-dom using ${command}...`);
+    console.log(`Installing npm deps using ${command}...`);
     console.log();
 
     const proc = spawn.sync(command, args, { stdio: 'inherit' });
@@ -162,6 +162,29 @@ module.exports = function(
   });
   if (dotnetRestoreProc.status !== 0) {
     console.error('dotnet restore failed.');
+    return;
+  }
+
+  console.log();
+  console.log(`Installing Fable Elmish dependencies...`);
+  console.log();
+
+  const dotnetElmishProc = spawn.sync(
+    'dotnet',
+    [
+      'fable',
+      'add',
+      'fable-powerpack@next',
+      'fable-react@next',
+      'fable-elmish@next',
+      'fable-elmish-react@next',
+    ],
+    {
+      stdio: 'inherit',
+    }
+  );
+  if (dotnetElmishProc.status !== 0) {
+    console.error('dotnet fable add failed.');
     return;
   }
 
