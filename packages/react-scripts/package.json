@@ -1,6 +1,6 @@
 {
   "name": "fable-react-scripts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Configuration and scripts for Create React App, adapted to support Fable.",
   "repository": "lucasmreis/create-react-app",
   "license": "BSD-3-Clause",
