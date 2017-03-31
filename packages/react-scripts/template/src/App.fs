@@ -24,6 +24,12 @@ open Fable.Core.JsInterop
 open Fable.Helpers.React.Props
 module R = Fable.Helpers.React
 
+// helper to be able to require css using webpack
+[<Emit("require($0)")>]
+let requireCss (file: string): unit = jsNative
+
+requireCss "./app.css"
+
 let appStyle =
   Style [
     unbox("padding", "20px")
