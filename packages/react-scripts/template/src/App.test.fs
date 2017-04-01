@@ -1,10 +1,9 @@
 module AppTest
 
-open Jest
 open App
 
-it "should increment" <| fun _ ->
-    toEqual 1 (update Increment 0)
+// STILL NOT IMPLEMENTED :(
 
-it "should decrement" <| fun _ ->
-    toEqual 0 (update Decrement 1)
+// If you want to help implementing the testing ability, please go to  https://github.com/lucasmreis/create-react-app
+
+// Thanks!

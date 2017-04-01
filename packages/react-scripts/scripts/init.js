@@ -178,7 +178,6 @@ module.exports = function(
       'fable-react@next',
       'fable-elmish@next',
       'fable-elmish-react@next',
-      'fable-jest',
     ],
     {
       stdio: 'inherit',
